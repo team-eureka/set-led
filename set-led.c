@@ -34,7 +34,7 @@ int main (int argc, char **argv) {
 
 
 static void print_usage (char *name) {
-	fprintf(stderr, "Usage: %s [-d|--daemonize] [-v|--verbose] white|red|off [solid|blinking]\n", name);
+	fprintf(stderr, "Usage: %s [-v|--verbose] white|red|off [solid|blinking]\n", name);
 	exit(EXIT_FAILURE);
 }
 

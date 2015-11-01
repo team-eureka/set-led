@@ -56,7 +56,6 @@ static int enable_pwm (const led *l) {
 		dbg_printf("Failed to open /dev/gpio to set pinmux. Attempting PWM, but expect trouble...\n");
 	}
 
-
 	unsigned int control = (DEFAULT_PRESCALE & 7) | ((DEFAULT_POLARITY & 1) << 3);
 
 	pwm_reg_write(l, CONTROL_REG_OFFSET, control);

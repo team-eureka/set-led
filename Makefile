@@ -1,10 +1,13 @@
+EXECUTABLE = set-led
 OBJECTS = set-led.o config.o args.o gpio.o pwm.o
+
 CFLAGS = -Wall -Wextra -std=c99
 
-all: set-led
-set-led: $(OBJECTS)
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
 
 clean:
-	-rm -f set-led *.o
+	-rm -f $(EXECUTABLE) $(OBJECTS)
 
 .PHONY: clean
